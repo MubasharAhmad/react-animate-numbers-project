@@ -118,7 +118,7 @@ const AnimatedNumbers = ({value, maxLength, options = {}}: AnimatedNumbersProps)
     <div style={{ display: "flex", gap: `${gap}px` }}>
       {digits.map((digit, i) => (
         <div key={i} style={{ position: "relative", height: `${fontSize}px`, width: `${width}px`, overflow: "hidden", backgroundColor: backgroundColor, border: border }}>
-          <div style={{ position: "absolute", top: "0", color: color, left: "0", height: `${fontSize * 10}px`, zIndex: "9999999", transform: `translateY(-${digit}0%)`, transition: `transform ${anSpeed} ${animationType}` }}>
+          <div style={{ position: "absolute", top: "0", color: color, left: "0", height: `${fontSize * 10}px`, zIndex: "2", transform: `translateY(-${digit}0%)`, transition: `transform ${anSpeed} ${animationType}` }}>
             {numbers.map((number, index) => (
                 <div key={`${index}-${i}`} style={{ height: `${fontSize}px`, width: `${width}px`, fontSize: `${fontSize}px`, fontWeight: bold ? "bold" : "normal", display: "flex", justifyContent: "center", justifyItems: "center", alignItems: "center" }}>
                     <p>{number}</p>
