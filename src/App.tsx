@@ -13,12 +13,15 @@ function App() {
   }, [])
   return (
     <div>
-      <AnimatedNumbers value={number} maxLength={5} options={
-        {
-          border: "1px solid red",
-          fontSize: 100
-        }
-      }/>
+      <AnimatedNumbers value={number} maxLength={5} options={{
+        color: "blue",
+        fontSize: 50,
+        border: "2px solid green",
+        animationSpeed: "lg",
+        bold: false,
+        gap: 10
+      }
+    }/>
     </div>
   )
 }

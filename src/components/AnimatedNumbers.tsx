@@ -98,7 +98,8 @@ const AnimatedNumbers = ({value, maxLength, options = {}}: AnimatedNumbersProps)
     bold = true,
     border = "",
     animationSpeed = "md",
-    animationType = "ease-in-out"
+    animationType = "ease-in-out",
+    gap = 0,
   } = options;
 
   const anSpeed = animationSpeed === "sm" ? "1.5s" : animationSpeed === "md" ? "1s" : "0.5s"
@@ -114,7 +115,7 @@ const AnimatedNumbers = ({value, maxLength, options = {}}: AnimatedNumbersProps)
   }, [value, maxLength])
 
   return (
-    <div style={{ display: "flex", gap: "0px" }}>
+    <div style={{ display: "flex", gap: `${gap}px` }}>
       {digits.map((digit, i) => (
         <div key={i} style={{ position: "relative", height: `${fontSize}px`, width: `${width}px`, overflow: "hidden", backgroundColor: backgroundColor, border: border }}>
           <div style={{ position: "absolute", top: "0", color: color, left: "0", height: `${fontSize * 10}px`, zIndex: "9999999", transform: `translateY(-${digit}0%)`, transition: `transform ${anSpeed} ${animationType}` }}>
