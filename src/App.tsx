@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import AnimatedNumbers from "react-animate-numbers"
+import AnimatedNumbers from "./components/AnimatedNumbers"
 
 function App() {
   const [number, setNumber] = useState(0)
@@ -16,7 +16,7 @@ function App() {
       <AnimatedNumbers value={number} maxLength={5} options={
         {
           border: "1px solid red",
-          fontSize: 100 
+          fontSize: 100
         }
       }/>
     </div>

@@ -66,7 +66,7 @@ interface AnimatedNumbersProps {
     /**
      * The color of the digits.
      * @property {string} color
-     * @default "black"
+     * @default ""
      */
     color?: string;
 
@@ -91,8 +91,8 @@ interface AnimatedNumbersProps {
  * @returns {JSX.Element} The animated number display component.
  */
 const AnimatedNumbers = ({value, maxLength, options = {}}: AnimatedNumbersProps): JSX.Element => {
-  const { 
-    color = "black",
+  const {
+    color = "",
     fontSize = 44,
     backgroundColor = "",
     bold = true,
